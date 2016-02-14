@@ -1,0 +1,17 @@
+1) onclick 
+2) onkeypress 
+3) onblur 
+4) onfocus 
+5) onsubmit 
+6) onload 
+7) onchange 
+8) onmousemove
+
+(8) mouse é movimentado sobre o elemento HTML.
+(4) elemento HTML recebe o foco.
+(3) elemento HTML perde o foco.
+(1) elemento recebe um clique do mouse.
+(6) a página é carregada.
+(7) elemento HTML tem seu valor alterado.
+(5) formulário é submetido.
+(2) uma tecla é pressionada e solta.

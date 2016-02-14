@@ -1,0 +1,47 @@
+<!--Implemente uma página HTML que realize a validação e pesquisa de CEP,
+utilizando AJAX, nos webservices disponíveis em: https://viacep.com.br/. Permita que o
+usuário informa o CEP ou os dados da CIDADE a serem pesquisados. Os dados devem ser
+retornados no formato JSON e armazenados em um objeto JavaScript para então serem
+exibidos ao usuário. Permita ainda que o usuário faça a pesquisa de CEPs em um
+determinado intervalo, ou seja, ele pode digitar um CEP inicial e um CEP final.-->
+<!DOCTYPE html>
+ <html>
+    <head>
+    <title>Exercicio 6</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="ajax.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+		<h2>Busca de CEP pelo endereço</h2>
+		<h4>Digite o CEP e ao sair o campo o endereço será completado</h4>
+    	<form>
+            <label>Cep:
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                   onblur="verificacep(this.value);" /></label><br />
+            <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" /></label><br />
+            <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+            <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+            <label>Estado:
+            <input name="uf" type="text" id="uf" size="2" /></label><br />
+            <label>IBGE:
+            <input name="ibge" type="text" id="ibge" size="8" /></label><br />
+        </form>
+
+        <h2>Busca de CEP pelo Endereco</h2>
+        <form>
+            <label>Estado:
+            <input name="estado" type="text" id="estado" size="40" /></label><br />
+            <label>Cidade:
+            <input name="localidade" type="text" id="localidade" size="40" /></label><br />
+            <label>Logradouro:
+            <input name="logradouro" type="text" id="logradouro" size="40" /></label><br />
+            <button type="button" onclick="buscacep();">Buscar</button><br/>
+            <textarea name="result" id="result" rows="20" cols="60"></textarea>
+        </form>
+    </body>
+
+    </html>

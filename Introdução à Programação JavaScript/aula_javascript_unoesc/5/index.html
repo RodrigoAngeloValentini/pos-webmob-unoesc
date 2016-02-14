@@ -1,0 +1,44 @@
+<!--Implemente uma página HTML com um banner rotativo. Selecione 03 imagens,
+uma para cada banner que deverão ser trocadas(exibidas) a cada 4 segundos. Use a função
+setInterval do JavaScript para realizar a troca. Há várias formas de implementar essa troca
+de imagens. Uma sugestão é manter um array com os valores possíveis para a imagem e um
+1inteiro que guarda qual é o banner atual:
+var banners = ["img/banner1.png", "img/banner2.png", ...];
+var bannerAtual = 0;
+function trocaBanner() {
+bannerAtual = (bannerAtual + 1) % 4;
+document.getElementById('imgBanner').src = banners[bannerAtual];
+}
+setInterval(trocaBanner, 4000);
+Implemente ainda a possibilidade do usuário pausar a rotação das imagens no banner.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio 5</title>
+</head>
+<body>
+	<img src="img/cod1.jpg" height="350" width="700" id="imgBanner">
+	<br/>
+	<button type="buttom" onclick="pause();">Pausar</button>
+	<button type="buttom" onclick="play();">Iniciar</button>
+</body>
+<script>
+	var banners = ["img/cod1.jpg", "img/cod2.jpg", "img/cod3.jpg"];
+	var bannerAtual = 0;
+	var time = null;
+
+	function trocaBanner() {
+		bannerAtual = (bannerAtual + 1) % 3;
+		document.getElementById('imgBanner').src = banners[bannerAtual];
+	}
+	timer = setInterval( trocaBanner, 4000);
+
+	function pause(){
+		clearInterval(timer);
+	}
+	function play(){
+		timer = setInterval( trocaBanner, 4000);
+	}
+</script>
+</html>

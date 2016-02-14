@@ -1,0 +1,6 @@
+1- Explique que vantagens e desvantagens existem no fato do JavaScript ser uma
+linguagem interpretada pelo navegador.
+
+Resposta:
+A vantagem é a independência entre cliente e servidor, o JavaScript pode realizar várias tarefas ainda no navegador, antes das informações serem enviadas para o servidor. Assim, poupa-se tempo e tráfego de dados.
+Como desvantagens pode ser citado a incompatibilidades entre os navegadores e também o fato do código fonte ficar de fácil acesso para o usuário.

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio - tipo de triangulo</title>
+</head>
+<body>
+	Lado1<input type="text" id="txtLado1" /><br />
+	Lado2<input type="text" id="txtLado2" /><br />
+	Lado3<input type="text" id="txtLado3" /><br />
+	<button type="button" onclick="verifica();">Verificar</button>
+</body>
+
+<script>
+function verifica(){
+	var a = document.getElementById("txtLado1").value;
+	var b = document.getElementById("txtLado2").value;
+	var c = document.getElementById("txtLado3").value;
+
+	if(a == b && b == c && c == a){
+		alert("Triangulo Equilátero");
+	}
+	else if(a != b && b != c && c != a){
+		alert("Triangulo Escaleno");
+	}
+	else{
+		alert("Triângulo Isósceles");
+	}
+}
+</script>
+</html>

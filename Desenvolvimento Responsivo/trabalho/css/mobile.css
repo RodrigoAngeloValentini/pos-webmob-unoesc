@@ -1,0 +1,31 @@
+.col-sobre{
+    width: 100%;
+}
+.col-sobre-right-content p{
+    font-size: 11px;
+}
+.experiencias-container{
+    width: 100%;
+}
+.col-experiencias{
+    width:300px;
+    height: 300px;
+}
+.experiencias-content {
+    height: 300px;
+    clip: rect(0 300px 290px 0);
+}
+.experiencia-description{
+    margin-top:300px;
+    height: 300px;
+}
+
+.col-formacao{
+    width: 100%;
+}
+.col-cursos{
+    width: 100%;
+}
+.col-contato{
+    width: 100%;
+}

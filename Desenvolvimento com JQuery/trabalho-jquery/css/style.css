@@ -1,0 +1,181 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  background: #3CABE4;
+  padding-bottom: 50px; }
+
+#banner {
+  max-height: 350px;
+  width: 100%; }
+  #banner img {
+    max-height: 200px;
+    width: 100%; }
+
+header #topo {
+  height: 50px;
+  width: 100%;
+  background: #B24926; }
+header #navbar {
+  height: 30px;
+  width: 100%;
+  text-align: center; }
+header #menu {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  header #menu li {
+    float: left;
+    display: block;
+    width: 100px;
+    position: relative;
+    z-index: 500;
+    margin: 0 1px; }
+    header #menu li a {
+      display: block;
+      padding: 5px;
+      font-weight: 700;
+      height: 30px;
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+      transition: 0.5s all;
+      -webkit-transition: 0.5s all;
+      -moz-transition: 0.5s all; }
+      header #menu li a:hover {
+        background: #ccc; }
+  header #menu #submenu li a {
+    background: #3CABE4;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all; }
+    header #menu #submenu li a:hover {
+      background: #ccc; }
+  header #menu ul {
+    position: absolute;
+    left: 0;
+    display: none;
+    padding: 0;
+    list-style: none;
+    margin: 0 0 0 -2px; }
+    header #menu ul li {
+      width: 100px;
+      float: left;
+      border-top: 1px solid #fff;
+      height: 30px; }
+      header #menu ul li a {
+        display: block;
+        height: 30px;
+        padding: 5px;
+        font-size: 14px; }
+
+.ui-menu {
+  width: 150px; }
+
+h1 {
+  color: #B24926; }
+
+#content #form, #content #galeria {
+  max-width: 960px;
+  background: white;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px; }
+#content .form-group {
+  width: 50%;
+  float: left;
+  padding: 5px;
+  text-align: left;
+  position: relative; }
+  #content .form-group button {
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+    height: 34px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background: #B24926;
+    border-color: #3CABE4;
+    color: white; }
+  #content .form-group #loading {
+    height: 32px;
+    width: 32px;
+    display: none; }
+  #content .form-group #result-ajax {
+    height: 32px;
+    background: green;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    color: white; }
+  #content .form-group .has-error {
+    border-color: #B24926;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+  #content .form-group .help-block {
+    color: #B24926;
+    position: absolute;
+    left: 10px;
+    top: 40px; }
+#content #form input, #content #form select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  margin: 5px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+#content option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px; }
+#content #form input:focus, #content #form select:focus {
+  border-color: #3CABE4;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+#content .clear:after {
+  content: '';
+  display: block;
+  clear: both; }
+#content #galeria {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  #content #galeria a img {
+    height: 100px;
+    width: 100px; }
+
+footer {
+  width: 100%;
+  height: 30px;
+  background: #B24926;
+  position: fixed;
+  bottom: 0px;
+  text-align: center; }
+  footer P {
+    color: white; }
+
+#seta-topo {
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background: white;
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+
+<html>
+	<body>
+		<img src="ajax.jpg" alt="imagem1" width="150px" height="150px">
+		<img src="ajax.jpg" alt="imagem2" width="150px" height="150px">
+		<img src="ajax.jpg" alt="imagem3" width="150px" height="150px">
+		<img src="ajax.jpg" alt="imagem4" width="150px" height="150px">
+	</body>
+</html>
+
+<script src="jquery-2.2.2.min.js" type="text/javascript"></script>
+<script>
+	jQuery.fn.makeLegenda = function(){
+	    var legenda = this.attr('alt');
+	    this.after('<span>'+legenda+'</span>')
+	};
+	$('img').each(function() {
+		$(this).makeLegenda();
+	});
+	
+</script>

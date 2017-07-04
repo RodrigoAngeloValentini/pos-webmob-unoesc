@@ -104,7 +104,7 @@ public class SplashActivity extends AppCompatActivity {
 
         // chamada da tela de login
         Handler h = new Handler();
-        // TODO: (0,50) Aumenta ro tempo de espera da tela splash para 4s.
+        // TODO: (0,50) Aumentar o tempo de espera da tela splash para 4s.
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -113,7 +113,7 @@ public class SplashActivity extends AppCompatActivity {
                 Intent itLogin =
                         new Intent(
                                 SplashActivity.this,
-                                LoginActivity.class
+                                LoginActivity_.class
                         );
                 startActivity(itLogin);
                 // fechando a splash

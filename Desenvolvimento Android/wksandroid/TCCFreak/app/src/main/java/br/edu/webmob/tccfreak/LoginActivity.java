@@ -3,39 +3,38 @@ package br.edu.webmob.tccfreak;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity
-        implements View.OnClickListener {
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
-    private EditText edtLogin;
-    private EditText edtSenha;
-    private ImageButton btnLogin;
-    private ImageButton btnSair;
+import br.edu.webmob.tccfreak.helper.DatabaseHelper;
+import br.edu.webmob.tccfreak.model.Usuario;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+@EActivity(R.layout.activity_login)
+public class LoginActivity extends AppCompatActivity {
+    @ViewById
+    EditText edtLogin;
+    @ViewById
+    EditText edtSenha;
+    @ViewById
+    ImageButton btnLogin;
+    @ViewById
+    ImageButton btnSair;
+    private DatabaseHelper dh;
 
-        // capturando instâncias da tela/xml
-        edtLogin = (EditText) findViewById(R.id.edtLogin);
-        edtSenha = (EditText) findViewById(R.id.edtSenha);
-        btnLogin = (ImageButton) findViewById(R.id.btnLogin);
-        btnSair = (ImageButton) findViewById(R.id.btnSair);
 
-        // adicionando o listener de click
-        btnLogin.setOnClickListener(this);
-        btnSair.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View view) {
+    @Click({R.id.btnLogin, R.id.btnSair})
+    public void doAction(View view) {
+        dh = new DatabaseHelper(this);
         switch (view.getId()) {
             case R.id.btnLogin:
                 String login = edtLogin.getText().toString();
@@ -52,7 +51,7 @@ public class LoginActivity extends AppCompatActivity
                                 PrincipalActivity.class
                         );
                         // passando parâmetros para a activity
-                        itPrincipal.putExtra("usuario","tccfreak");
+                        itPrincipal.putExtra("usuario", "tccfreak");
                         startActivity(itPrincipal);
                         // finaliza a tela de login
                         finish();
